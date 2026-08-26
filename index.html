@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+    <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
@@ -241,6 +242,55 @@
       border-top: 1px solid var(--card-border);
       background-color: #ffffff;
     }
+    .skill-card {
+      background: #ffffff;
+      border: 1px solid #eaecf0;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      border-color: #d0d5dd;
+    }
+
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Icon Accents */
+    .icon-frontend { background-color: #eff8ff; color: #175cd3; }
+    .icon-backend { background-color: #ecfdf3; color: #027a48; }
+    .icon-tools { background-color: #f4f3ff; color: #5925dc; }
+
+    .skill-badge {
+      display: inline-block;
+      background-color: #f8f9fa;
+      color: #344054;
+      border: 1px solid #f0f2f5;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .skill-card:hover .skill-badge {
+      background-color: #f2f4f7;
+    }
+
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
@@ -425,65 +475,70 @@
   </section>
 
   <!-- SKILLS SECTION -->
-  <section id="skills" class="py-5 bg-light">
+  <section id="skills" class="py-5 bg-white">
     <div class="container py-4">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-lg-6">
-          <span class="section-tag">What I Do</span>
-          <h2 class="section-title">Core Competencies</h2>
-          <p class="text-muted">Combining technical skills with strategic digital marketing and instruction.</p>
-        </div>
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5">
+        <h6 class="text-uppercase text-primary fw-bold tracking-wider">Expertise</h6>
+        <h2 class="fw-bold text-dark mb-2">Technical Skills</h2>
+        <p class="text-muted">Technologies and tools I use to build robust fullstack applications.</p>
       </div>
 
+      <!-- 3-Grid Layout -->
       <div class="row g-4">
-        <!-- Skill 1 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="custom-card">
-            <div class="card-icon-box"><i class="fa-solid fa-code"></i></div>
-            <h4 class="h5 fw-bold mb-3">Full-Stack Development</h4>
-            <p class="text-muted small mb-4">
-              Building modern, responsive, and performance-optimized websites using HTML5, CSS3, JavaScript, Bootstrap, and backend technology integrations.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-white text-dark border">HTML/CSS</span>
-              <span class="badge bg-white text-dark border">JavaScript</span>
-              <span class="badge bg-white text-dark border">Bootstrap</span>
-              <span class="badge bg-white text-dark border">WordPress</span>
+        
+        <!-- Grid 1: Frontend Development -->
+        <div class="col-md-4">
+          <div class="skill-card h-100">
+            <div class="icon-wrapper icon-frontend">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h4 class="fw-semibold text-dark mb-2">Frontend</h4>
+            <p class="text-muted fs-6 mb-4">Building responsive, accessible, and user-friendly web interfaces.</p>
+            <div class="skills-list">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">Bootstrap</span>
+              <span class="skill-badge">Tailwind CSS</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill 2 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="custom-card">
-            <div class="card-icon-box"><i class="fa-solid fa-chart-line"></i></div>
-            <h4 class="h5 fw-bold mb-3">Digital Marketing</h4>
-            <p class="text-muted small mb-4">
-              Designing targeted marketing strategies, managing online brand presence, SEO optimization, and creating data-driven campaigns.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-white text-dark border">SEO Optimization</span>
-              <span class="badge bg-white text-dark border">Social Media Strategy</span>
-              <span class="badge bg-white text-dark border">Content Strategy</span>
+        <!-- Grid 2: Backend Development -->
+        <div class="col-md-4">
+          <div class="skill-card h-100">
+            <div class="icon-wrapper icon-backend">
+              <i class="bi bi-server"></i>
+            </div>
+            <h4 class="fw-semibold text-dark mb-2">Backend</h4>
+            <p class="text-muted fs-6 mb-4">Designing resilient server architectures, APIs, and databases.</p>
+            <div class="skills-list">
+              <span class="skill-badge">PHP</span>
+              <span class="skill-badge">Laravel</span>
+              <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">MongoDB</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill 3 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="custom-card">
-            <div class="card-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-            <h4 class="h5 fw-bold mb-3">Online Teaching</h4>
-            <p class="text-muted small mb-4">
-              Delivering engaging live and recorded digital courses, mentoring students, and developing structured online learning resources.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-white text-dark border">E-Learning</span>
-              <span class="badge bg-white text-dark border">Curriculum Design</span>
-              <span class="badge bg-white text-dark border">Student Mentorship</span>
+        <!-- Grid 3: DevOps & Version Control -->
+        <div class="col-md-4">
+          <div class="skill-card h-100">
+            <div class="icon-wrapper icon-tools">
+              <i class="bi bi-git"></i>
+            </div>
+            <h4 class="fw-semibold text-dark mb-2">Workflow & Tools</h4>
+            <p class="text-muted fs-6 mb-4">Managing code repositories, continuous integration, and deployments.</p>
+            <div class="skills-list">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">REST APIs</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
