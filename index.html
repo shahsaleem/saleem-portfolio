@@ -291,6 +291,70 @@
       background-color: #f2f4f7;
     }
 
+/* new added css */
+
+/* Saleem Academy - Responsive Grid */
+
+.sa-grid-section {
+  padding: 24px 0;
+}
+
+.sa-grid-card {
+  background-color: #ffffff;
+  border: 1px solid #dce7e2;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sa-grid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.sa-grid-card .sa-grid-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.sa-grid-card .sa-grid-heading {
+  color: #065f46;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sa-grid-card .sa-grid-link {
+  display: inline-block;
+  color: #059669;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.sa-grid-card .sa-grid-link:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+.sa-grid-card .sa-grid-link:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+
+
+
+
+/* new css ends here */
+
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
@@ -355,7 +419,7 @@
         <div class="col-lg-5 order-1 order-lg-2 text-center">
           <div class="profile-img-wrapper">
             <img 
-              src="https://saleemacademy.pk/wp-content/uploads/2026/08/file_00000000e428720b93148f93834ad080.png" 
+              src="./images/Saleem Shah.png" 
               alt="Saleem Shah" 
               class="profile-img"
               onerror="this.src='https://via.placeholder.com/280';"
@@ -542,6 +606,75 @@
       </div>
     </div>
   </section>
+
+<!-- My Work -->
+
+<h2 class="fw-bold text-dark mb-2 text-center">My Projects</h2>
+
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="sa-grid-card">
+          <img
+            src="./images/portfolio.PNG"
+            alt="Books"
+            class="sa-grid-image"
+          >
+          <h5 class="sa-grid-heading">1st Project</h5>
+          <a href="https://shahsaleem.github.io/saleem-portfolio/" class="sa-grid-link">
+            View Project →
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="sa-grid-card">
+          <img
+            src="./images/MaleFashion.webp"
+            alt="Study Notes"
+            class="sa-grid-image"
+          >
+          <h5 class="sa-grid-heading">Ecommerce Project</h5>
+          <a href="https://shahsaleem.github.io/malefashion/" class="sa-grid-link">
+            View Project →
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="sa-grid-card">
+          <img
+            src="./images/academy.PNG"
+            alt="Past Papers"
+            class="sa-grid-image"
+          >
+          <h5 class="sa-grid-heading">Deployed Project</h5>
+          <a href="papers.html" class="sa-grid-link">
+            View Project →
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="sa-grid-card">
+          <img
+            src="./images/upcomingsaleemtimes.jpg"
+            alt="Online Courses"
+            class="sa-grid-image"
+          >
+          <h5 class="sa-grid-heading">Blog Website</h5>
+          <a href="#" class="sa-grid-link">
+            Coming Soon →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
 
   <!-- REVIEWS SECTION -->
   <section id="reviews" class="py-5">
